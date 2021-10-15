@@ -1,6 +1,7 @@
 # Frontend
 
 https://www.notion.so/Secret-Family-Recipes-Cookbook-4536085f749f4ce58178e3c8bc62bb41
+https://www.notion.so/Build-Week-Student-Guide-Part-time-4b47d40935714248a525ed43cda1e0a4
 
 ## ☝️**Pitch**
 
