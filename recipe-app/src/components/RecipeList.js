@@ -5,23 +5,13 @@ const RecipeList = (props)=> {
     const { recipes} = props;
 
     return (
-        <div className="col">
-            <table className="recipetable">
-                <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Source</th>
-                    <th>Category</th>
-                    <th>Ingredients</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                    {
-                        recipes.map(recipe=><RecipeListItems key={recipe.id} recipe={recipe}/>)
-                    }
-                </tbody>
-            </table>
+        <div className="rec">
+            <h2 className="rec-header">All Recipes</h2>
+            
+            <div className="recipes">
+                {recipes.map(recipe=><RecipeListItems key={recipe.id} recipe={recipe}/>)}
+            </div>
+                
         </div>
     );
 }
