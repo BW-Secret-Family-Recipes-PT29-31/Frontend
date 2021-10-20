@@ -9,11 +9,11 @@ const Header = ()=> {
         </div>
         <div className="header-links">
             <Link to="/home" className="home-btn btn">Home</Link>
-            <Link to="/login" className="add-btn btn">Add New Recipes</Link>
+            <Link to="/addrecipes" className="add-btn btn">Add New Recipes</Link>
             <Link to="/recipes" className="view-btn btn">View All Recipes</Link>
             <Link to="/login" className="login-btn btn">Login</Link>
             <Link to="/signup" className="signup-btn btn">Signup</Link>
-            <Link className="logout-btn btn">Logout</Link>
+            <Link to="/logout" className="logout-btn btn">Logout</Link>
         </div>
         </div>
     </div>);

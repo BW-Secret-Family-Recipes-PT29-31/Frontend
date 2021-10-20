@@ -5,6 +5,9 @@ import Homepage from './components/Homepage';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import RecipeList from './components/RecipeList';
+import Recipe from './components/Recipe';
+import AddRecipe from './components/AddRecipe';
+import Logout from './components/Logout';
 
 import { Route, Switch, Redirect } from "react-router-dom";
 
@@ -39,11 +42,20 @@ const App = () => {
         <Route path="/login">
         <Login/>
         </Route>
+        <Route path="/logout">
+        <Logout/>
+        </Route>
         <Route path="/signup">
         <Signup/>
         </Route>
         <Route path="/recipes">
         <RecipeList recipes={recipes}/>
+        </Route>
+        <Route path="/view">
+        <Recipe/>
+        </Route>
+        <Route path="/addrecipes">
+        <AddRecipe/>
         </Route>
         <Route path="/">
         <Redirect to="/home"/>
