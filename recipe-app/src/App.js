@@ -8,6 +8,7 @@ import RecipeList from './components/RecipeList';
 import Recipe from './components/Recipe';
 import AddRecipe from './components/AddRecipe';
 import Logout from './components/Logout';
+import EditRecipe from './components/EditRecipe';
 
 import { Route, Switch, Redirect } from "react-router-dom";
 
@@ -56,6 +57,9 @@ const App = () => {
         </Route>
         <Route path="/addrecipes">
         <AddRecipe/>
+        </Route>
+        <Route path="/edit">
+        <EditRecipe/>
         </Route>
         <Route path="/">
         <Redirect to="/home"/>
