@@ -2,14 +2,17 @@ import React from 'react';
 
 
 
+
 class Signup extends React.Component {
     state = {
         credentials: {
           username: '',
           email: '',
-          password: ''
+          password: '',
+          confirm_password: ''
         }
       };
+
     
       handleChange = e => {
         this.setState({
@@ -19,12 +22,14 @@ class Signup extends React.Component {
           }
         });
       };
+
     
       render() {
+        
         return (
           <div className="signin">
               <p>Signup to see all the recipes</p>
-            <form >
+            <form>
             <label for="username">Username: </label>
               <input
                 type="text"
@@ -44,6 +49,13 @@ class Signup extends React.Component {
                 type="password"
                 name="password"
                 value={this.state.credentials.password}
+                onChange={this.handleChange}
+              />
+              <label for="confirm_password">Confirm Password: </label>
+              <input
+                type="password"
+                name="confirm_password"
+                value={this.state.credentials.confirm_password}
                 onChange={this.handleChange}
               />
               <button>Signup</button>

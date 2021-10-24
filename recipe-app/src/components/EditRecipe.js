@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+//import { useParams, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const EditRecipe = () => {

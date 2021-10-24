@@ -9,7 +9,7 @@ const Recipe = () => {
   const { push } = useHistory();
 
   useEffect(()=>{
-      axios.get('')
+      axios.get(`http://localhost:5000/api/recipes/${id}`)
         .then(res => {
           console.log(res.data);
           setRecipe(res.data);
@@ -17,13 +17,13 @@ const Recipe = () => {
         .catch(err => {
           console.log(err);
         });
-    }, []);
+    }, [id]);
 
     const handleDelete = () => {
-      axios.delete(``)
+      axios.delete(`http://localhost:5000/api/recipes/${id}`)
       .then(res => {
       console.log(res);
-      props.setMovies(res.data)
+      setRecipe(res.data)
       push(`/recipes`)
       })
       .catch(err => console.log(err))

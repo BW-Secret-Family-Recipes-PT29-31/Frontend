@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Login from './components/Login';
@@ -20,7 +21,7 @@ const initialrecipes = [{
   ingredients: "rice, water",
   instructions: "put rice and water in pot"
 }, {
-  id: 1,
+  id: 2,
   title: "Beans",
   source: "source2",
   category: "protein",
@@ -31,6 +32,18 @@ const initialrecipes = [{
 
 const App = () => {
   const [recipes, setRecipes] = useState(initialrecipes)
+
+  useEffect(()=>{
+    axios.get('http://localhost:5000/api/recipes')
+      .then(res => {
+        console.log(res.data);
+        setRecipes(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="App">
       <div>
